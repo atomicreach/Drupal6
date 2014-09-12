@@ -1,0 +1,9 @@
+<?php
+
+/**
+  * Implement hook_enable()
+  */
+function atomicreach_enable() {
+drupal_set_message($message = t('<h2>Atomic Engager module may not work, until you set the API keys. <a href="?q=admin/settings/atomicreach">Click here</a> to set the keys now.</h2>'), $type = 'warning');         
+}
+?>
