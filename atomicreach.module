@@ -378,3 +378,13 @@ function ar_custom_dictionary() {
     echo $success ? 'OK' : 'ERROR';
     exit();
 }
+/**
+ * Implementation of hook_views_api().
+*/
+function atomicreach_views_api() {
+    if (module_exists('views')) {
+  return array(
+    'api' => 2.0,
+  );  
+    }
+}
