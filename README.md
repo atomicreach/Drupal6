@@ -18,7 +18,7 @@ This module also create a RSS view(using [View] module) of 300 latest articles w
 
 Version
 ----
-2.0.09
+2.0.11
 
 Installation
 --------------

@@ -66,7 +66,8 @@ Drupal.behaviors.atomicreachBehavior = function(context) {
             var words = $.map(SMwords, function(word, i) {
                 return word.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
             });
-            var regexSm = new RegExp('(\\b' + words.join("?[\\x27]?[\\S]+\\b|\\b") + '?[\\x27]?[\\S]+\\b)', 'ig');
+//            var regexSm = new RegExp('(\\b' + words.join("?[\\x27]?[\\S]+\\b|\\b") + '?[\\x27]?[\\S]+\\b)', 'ig');
+            var regexSm = new RegExp('(\\b' + words.join("([\\x27][\\S]*)?\\b|\\b") + '([\\x27][\\S]*)?\\b)', 'ig');
 //        console.log(regexSm);
 
 
@@ -113,7 +114,7 @@ Drupal.behaviors.atomicreachBehavior = function(context) {
         var words = $.map(GMwords, function(word, i) {
             return word.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
         });
-        var regexGm = new RegExp('(\\b' + words.join("?[\\x27]?[\\S]+\\b|\\b") + '?[\\x27]?[\\S]+\\b)', 'g');
+        var regexGm = new RegExp('(\\b' + words.join("([\\x27][\\S]*)?\\b|\\b") + '([\\x27][\\S]*)?\\b)', 'g');
 
         $("#highlight-gm").toggle(function() {
             $('#edit-body-wrapper div, #edit-body-wrapper iframe').contents().highlightRegex(regexGm, {

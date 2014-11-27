@@ -107,9 +107,16 @@ function atomicreach_form_alter(&$form, &$form_state) {
 
             $form['arPost']['araudience'] = array(
                 '#type' => 'select',
-                '#title' => t('Target Audience Segment '),
+                '#title' => t('Target Audience Segment <a class="ARinfoToolTip-right" href="#"><i style="vertical-align:
+                bottom;" class="fa
+					fa-info-circle"></i>
+					<span><img src="' . base_path() . drupal_get_path('module', 'atomicreach') . '/inc/images/AR-KnowledgeWheel-Words.png"
+					alt="soph
+					pie img" /></span>
+				</a> '),
                 '#default_value' => $form_state['values']['araudience'],
                 '#weight' => 20,
+                '#suffix'  => t(''),
                 '#options' => $options
             );
 

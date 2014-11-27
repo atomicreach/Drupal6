@@ -416,7 +416,7 @@ class meta {
                     $num++;
                 }
             }
-            $out .= '<p>Refer to our guide on how to create engaging titles <a class="toggle-link ar-message-link" target="_blank" href="http://hub.atomicreach.com/i/303939/"><span>here</span></a>.</p>';
+            $out .= '<p>Refer to our guide on how to create engaging titles <a class="toggle-link ar-message-link" target="_blank" href="http://hub.atomicreach.com/i/341645/"><span>here</span></a>.</p>';
             $out .= "</ul>";
         }
         $out .= '</article>' . PHP_EOL;
